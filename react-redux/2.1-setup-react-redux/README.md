@@ -10,3 +10,5 @@
 
 # Creating Store
 ### Providing store to React Application
+- Create store in redux root. Import createStore and pass counterReducer in it.
+- Import Provider from react-redux and wrap whole app with Provider and also pass store within it.
