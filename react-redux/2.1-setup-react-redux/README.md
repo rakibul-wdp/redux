@@ -7,3 +7,6 @@
 # Creating Reducers
 ### Define our business logics
 - Create counterReducer function with switch statement. This function take tow parameter like initialState anc action. Reducer function is immutably done.
+
+# Creating Store
+### Providing store to React Application
