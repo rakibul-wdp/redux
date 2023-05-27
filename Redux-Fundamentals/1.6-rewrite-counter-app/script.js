@@ -13,12 +13,12 @@ function counterReducer(state = initialState, action) {
   if (action.type === "increment") {
     return {
       ...state,
-      value: state.value + 1,
+      value: state.value + action.payload,
     }
   } else if (action.type === "decrement") {
     return {
       ...state,
-      value: state.value - 1,
+      value: state.value - action.payload,
     }
   } else {
     return state;
@@ -41,12 +41,14 @@ store.subscribe(render);
 // button click listeners
 incrementEl.addEventListener("click", () => {
   store.dispatch({
-    type: "increment",
+    type: "increment", // mandatory
+    payload: 5,
   });
 })
 
 decrementEl.addEventListener("click", () => {
   store.dispatch({
-    type: "decrement",
+    type: "decrement", // mandatory
+    payload: 2,
   });
 })
