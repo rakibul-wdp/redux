@@ -7,6 +7,21 @@ const decrementEl = document.getElementById("decrement");
 const INCREMENT = "increment";
 const DECREMENT = "decrement";
 
+// action creators
+const increment = () => {
+  return {
+    type: INCREMENT,
+    payload: 5,
+  }
+}
+
+const decrement = () => {
+  return {
+    type: DECREMENT,
+    payload: 2,
+  }
+}
+
 // initial state
 const initialState = {
   value: 0,
@@ -44,15 +59,9 @@ store.subscribe(render);
 
 // button click listeners
 incrementEl.addEventListener("click", () => {
-  store.dispatch({
-    type: INCREMENT, // mandatory
-    payload: 5,
-  });
+  store.dispatch(increment());
 })
 
 decrementEl.addEventListener("click", () => {
-  store.dispatch({
-    type: DECREMENT, // mandatory
-    payload: 2,
-  });
+  store.dispatch(decrement());
 })
