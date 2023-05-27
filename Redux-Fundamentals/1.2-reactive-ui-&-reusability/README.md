@@ -10,3 +10,6 @@
 
 #### One-way data flow
 - View -> Action -> State -> View -> Action....
+
+# React State Management Issues
+### Why we need a separate state management library
