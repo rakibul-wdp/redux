@@ -28,6 +28,16 @@ function counterReducer(state = initialState, action) {
 // create store
 const store = Redux.createStore(counterReducer);
 
+const render = () => {
+  const state = store.getState();
+  counterEl.innerText = state.value.toString();
+}
+
+// update UI initially
+render();
+
+store.subscribe(render);
+
 // button click listeners
 incrementEl.addEventListener("click", () => {
   store.dispatch({
