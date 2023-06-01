@@ -2,9 +2,12 @@ const state = {
   value: 5,
 };
 
-function impure() {
-  state.value = 6;
+function impure(multiplier) {
+  state.value = state.value * multiplier;
 };
 
-impure();
+impure(2);
+console.log(state.value);
+
+impure(2);
 console.log(state.value);
