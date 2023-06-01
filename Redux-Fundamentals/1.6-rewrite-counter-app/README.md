@@ -3,3 +3,6 @@
 
 # Action Payloads & Creators
 ### Why we need Action Creators
+
+# Understand Reducers
+### Pure Functions & Immutability
