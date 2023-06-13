@@ -28,3 +28,5 @@ const counterReducer = (state, action) => {
 const finalResult = actions.reduce(counterReducer, initialState);
 
 console.log(finalResult);
+
+// reducer reduce actions

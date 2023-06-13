@@ -12,3 +12,6 @@
 
 # Why Reducers are called Reducers
 ### Important Job Interview Question explained
+
+# Redux Data flow
+### How Redux works behind the scene
