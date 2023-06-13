@@ -9,3 +9,6 @@
 
 # Immutability Concept
 ### Learn with examples
+
+# Why Reducers are called Reducers
+### Important Job Interview Question explained
