@@ -1,3 +1,10 @@
+// select dom elements
+const totalEl = document.getElementById("total");
+const incrementEl = document.getElementById("increment");
+const decrementEl = document.getElementById("decrement");
+const addEl = document.getElementById("add");
+const resetEl = document.getElementById("reset");
+
 // action identifiers
 const INCREMENT = "increment";
 const DECREMENT = "decrement";
