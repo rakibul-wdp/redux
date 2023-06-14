@@ -84,3 +84,22 @@ const render = () => {
 render();
 
 store.subscribe(render);
+
+// button click listeners
+incrementEl.addEventListener('keydown', function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+
+    const incrementValue = parseInt(incrementEl.value);
+    store.dispatch(increment(incrementValue));
+  }
+});
+
+decrementEl.addEventListener('keydown', function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+
+    const decrementValue = parseInt(decrementEl.value);
+    store.dispatch(decrement(decrementValue));
+  }
+});
