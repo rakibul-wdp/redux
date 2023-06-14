@@ -53,9 +53,12 @@ function scoreboardReducer(state = initialState, action) {
       value: state.value + action.payload
     }
   } else if (action.type === DECREMENT) {
+    const newValue = state.value - action.payload;
+    const updatedValue = newValue < 0 ? 0 : newValue;
+
     return {
       ...state,
-      value: state.value - action.payload
+      value: updatedValue
     }
   } else if (action.type === ADD) {
     return {
@@ -92,6 +95,8 @@ incrementEl.addEventListener('keydown', function (event) {
 
     const incrementValue = parseInt(incrementEl.value);
     store.dispatch(increment(incrementValue));
+
+    incrementEl.value = "";
   }
 });
 
@@ -101,5 +106,7 @@ decrementEl.addEventListener('keydown', function (event) {
 
     const decrementValue = parseInt(decrementEl.value);
     store.dispatch(decrement(decrementValue));
+
+    decrementEl.value = "";
   }
 });
