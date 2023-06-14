@@ -32,3 +32,35 @@ const reset = (value) => {
     payload: value
   }
 }
+
+// initial state
+const initialState = {
+  value: 0
+}
+
+// create reducer function
+function scoreboardReducer(state = initialState, action) {
+  if (action.type === INCREMENT) {
+    return {
+      ...state,
+      value: state.value + action.payload
+    }
+  } else if (action.type === DECREMENT) {
+    return {
+      ...state,
+      value: state.value - action.payload
+    }
+  } else if (action.type === ADD) {
+    return {
+      ...state,
+      value: state.value + action.payload
+    }
+  } else if (action.type === RESET) {
+    return {
+      ...state,
+      value: state.value + action.payload
+    }
+  } else {
+    return state;
+  }
+}
