@@ -33,10 +33,9 @@ const add = (value) => {
   }
 }
 
-const reset = (value) => {
+const reset = () => {
   return {
     type: RESET,
-    payload: value
   }
 }
 
@@ -63,12 +62,11 @@ function scoreboardReducer(state = initialState, action) {
   } else if (action.type === ADD) {
     return {
       ...state,
-      value: state.value + action.payload
     }
   } else if (action.type === RESET) {
     return {
       ...state,
-      value: state.value + action.payload
+      value: state.value = 0
     }
   } else {
     return state;
@@ -89,7 +87,7 @@ render();
 store.subscribe(render);
 
 // button click listeners
-incrementEl.addEventListener('keydown', function (event) {
+incrementEl.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
     event.preventDefault();
 
@@ -100,7 +98,7 @@ incrementEl.addEventListener('keydown', function (event) {
   }
 });
 
-decrementEl.addEventListener('keydown', function (event) {
+decrementEl.addEventListener('keydown', (event) => {
   if (event.keyCode === 13) {
     event.preventDefault();
 
@@ -109,4 +107,53 @@ decrementEl.addEventListener('keydown', function (event) {
 
     decrementEl.value = "";
   }
+});
+
+resetEl.addEventListener("click", () => {
+  store.dispatch(reset());
+})
+
+addEl.addEventListener("click", () => {
+  // Create a new match element
+  const newMatch = document.createElement("div");
+  newMatch.classList.add("match");
+
+  // Set the content of the new match element
+  newMatch.innerHTML = `
+    <div class="wrapper">
+      <button class="lws-delete">
+        <img src="./image/delete.svg" alt="" />
+      </button>
+      <h3 class="lws-matchName">Match</h3>
+    </div>
+    <div class="inc-dec">
+      <form class="incrementForm">
+        <h4>Increment</h4>
+        <input
+          type="number"
+          name="increment"
+          class="lws-increment"
+          id="increment"
+        />
+      </form>
+      <form class="decrementForm">
+        <h4>Decrement</h4>
+        <input
+          type="number"
+          name="decrement"
+          class="lws-decrement"
+          id="decrement"
+        />
+      </form>
+    </div>
+    <div class="numbers">
+      <h2 class="lws-singleResult" id="total">0</h2>
+    </div>
+  `;
+
+  // Append the new match element to the container
+  const matchContainer = document.getElementById("all-matches-container");
+  matchContainer.appendChild(newMatch);
+
+  store.dispatch(add());
 });
