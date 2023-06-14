@@ -64,3 +64,16 @@ function scoreboardReducer(state = initialState, action) {
     return state;
   }
 }
+
+// create store
+const store = Redux.createStore(scoreboardReducer);
+
+const render = () => {
+  const state = store.getState();
+  totalEl.innerText = state.value.toString();
+}
+
+// update UI initially
+render();
+
+store.subscribe(render);
