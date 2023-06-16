@@ -12,3 +12,10 @@
 ### Providing store to React Application
 - Create store in redux root. Import createStore and pass counterReducer in it.
 - Import Provider from react-redux and wrap whole app with Provider and also pass store within it.
+
+# Connect API
+### mapStateToProps() and mapDispatchToProps()
+- Higher Order Component
+- What they actually do?
+- A Higher-order Component is a function that takes a component as parameter and return a new component.
+- ```const NewComponent = HOC(OriginalComponent)```
