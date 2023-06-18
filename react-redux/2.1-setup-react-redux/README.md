@@ -22,3 +22,7 @@
 
 # Redux hooks - useSelector()
 ### Simplify Redux & replace connect API
+
+# Redux hooks - useDispatch()
+### Simplify dispatching actions to Redux
+- useDispatch for dispatch.
