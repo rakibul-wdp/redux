@@ -19,3 +19,6 @@
 - What they actually do?
 - A Higher-order Component is a function that takes a component as parameter and return a new component.
 - ```const NewComponent = HOC(OriginalComponent)```
+
+# Redux hooks - useSelector()
+### Simplify Redux & replace connect API
