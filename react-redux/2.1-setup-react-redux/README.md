@@ -26,3 +26,6 @@
 # Redux hooks - useDispatch()
 ### Simplify dispatching actions to Redux
 - useDispatch for dispatch.
+
+# Redux combineReducers()
+### Modularize Redux reducers for better maintainability
