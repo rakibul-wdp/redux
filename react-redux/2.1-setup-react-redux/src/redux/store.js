@@ -1,7 +1,6 @@
 import { createStore } from "redux";
-import counterReducer from "./counter/counterReducer";
-import dynamicCounterReducer from "./dynamicCounter/dynamicCounterReducer";
+import rootReducer from "./rootReducer";
 
-const store = createStore(counterReducer);
+const store = createStore(rootReducer);
 
 export default store;
