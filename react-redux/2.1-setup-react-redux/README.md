@@ -29,3 +29,6 @@
 
 # Redux combineReducers()
 ### Modularize Redux reducers for better maintainability
+
+# Own props with connect API
+### Accessing component own props
