@@ -32,3 +32,6 @@
 
 # Own props with connect API
 ### Accessing component own props
+
+# Redux Middleware Concept
+### Creating custom logger for Redux store
