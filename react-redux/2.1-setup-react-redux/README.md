@@ -52,3 +52,7 @@
 # Adding multiple Middleware
 
 ### Adding third party Middleware in our app
+
+# Debugging Redux Application
+
+### Installing Redux Devtools extension
