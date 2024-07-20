@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import "./App.css";
-import Parent from "./components/Parent";
+import Counter from "./components/Counter";
 
 export const COUNTER_CONTEXT = createContext();
 
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <COUNTER_CONTEXT.Provider value={value}>
-      <Parent />
+      <Counter />
     </COUNTER_CONTEXT.Provider>
   );
 }
