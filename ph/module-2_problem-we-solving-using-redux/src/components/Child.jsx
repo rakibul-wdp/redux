@@ -1,4 +1,9 @@
-const Child = ({ count, setCount }) => {
+import { useContext } from "react";
+import { COUNTER_CONTEXT } from "../App";
+
+const Child = () => {
+  const { count, setCount } = useContext(COUNTER_CONTEXT);
+
   return (
     <div>
       <h1>Child</h1>
