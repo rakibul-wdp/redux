@@ -1,11 +1,13 @@
+import { Provider } from "react-redux";
 import "./App.css";
 import Form from "./components/Form";
 import Header from "./components/Header";
 import Table from "./components/Table";
+import store from "./redux/store";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Header />
       <section>
         {/* <!-- Input Data --> */}
@@ -20,7 +22,7 @@ function App() {
           <Table />
         </div>
       </section>
-    </>
+    </Provider>
   );
 }
 
