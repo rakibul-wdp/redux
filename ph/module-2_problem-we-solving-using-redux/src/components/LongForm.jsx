@@ -1,4 +1,21 @@
+import { useReducer } from "react";
+
 const LongForm = () => {
+  const initialState = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    gender: "",
+    education: "",
+    quantity: 0,
+    feedback: "",
+    term: true,
+  };
+
+  const reducer = (state, action) => {};
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   const handleSubmit = (e) => {
     e.preventDefault();
   };
