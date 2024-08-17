@@ -3,7 +3,7 @@ import { BiListPlus } from "react-icons/bi";
 import { useProducts } from "../context/ProductProvider";
 import { actionTypes } from "../state/productState/actionTypes";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, cartDisabled, wishlistDisabled }) => {
   const { dispatch } = useProducts();
 
   return (
@@ -31,8 +31,12 @@ const ProductCard = ({ product }) => {
         <button
           className="bg-indigo-500 rounded-full py-1 px-2 flex-1 text-white text-bold"
           onClick={() =>
-            dispatch({ type: actionTypes.ADD_TO_CART, payload: product })
+            dispatch({
+              type: actionTypes.ADD_TO_CART,
+              payload: product,
+            })
           }
+          disabled={cartDisabled}
         >
           Add to cart
         </button>
@@ -40,8 +44,12 @@ const ProductCard = ({ product }) => {
           title="Add to wishlist"
           className="bg-indigo-500  py-1 px-2 rounded-full"
           onClick={() =>
-            dispatch({ type: actionTypes.ADD_TO_WISHLIST, payload: product })
+            dispatch({
+              type: actionTypes.ADD_TO_WISHLIST,
+              payload: product,
+            })
           }
+          disabled={wishlistDisabled}
         >
           <BiListPlus className="text-white" />
         </button>

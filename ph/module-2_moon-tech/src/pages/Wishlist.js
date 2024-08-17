@@ -15,7 +15,7 @@ const Wishlist = () => {
     content = <p>Nothing to show, product list is empty!</p>;
   if (!loading && !error && wishlist.length)
     content = wishlist.map((product, index) => (
-      <ProductCard key={index} product={product} />
+      <ProductCard key={index} product={product} wishlistDisabled={true} />
     ));
 
   return (

@@ -32,12 +32,18 @@ export const productReducer = (state, action) => {
     case actionTypes.ADD_TO_CART:
       return {
         ...state,
-        cart: [...state.cart, action.payload],
+        cart: [
+          ...state.cart,
+          !state.cart.includes(action.payload) && action.payload,
+        ],
       };
     case actionTypes.ADD_TO_WISHLIST:
       return {
         ...state,
-        wishlist: [...state.wishlist, action.payload],
+        wishlist: [
+          ...state.wishlist,
+          !state.wishlist.includes(action.payload) && action.payload,
+        ],
       };
     default:
       return state;

@@ -15,7 +15,7 @@ const Cart = () => {
     content = <p>Nothing to show, product list is empty!</p>;
   if (!loading && !error && cart.length)
     content = cart.map((product, index) => (
-      <ProductCard key={index} product={product} />
+      <ProductCard key={index} product={product} cartDisabled={true} />
     ));
 
   return (
