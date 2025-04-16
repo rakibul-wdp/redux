@@ -33,7 +33,7 @@ const Tasks = () => {
               setIsOpen={setIsOpen}
               title={"Add Task Form"}
             >
-              <AddTaskModal />
+              <AddTaskModal setIsOpen={setIsOpen} />
             </Modal>
             <div className="h-10 w-10 rounded-xl overflow-hidden">
               <img
