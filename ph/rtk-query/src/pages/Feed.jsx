@@ -3,15 +3,21 @@ import PostCard from "../components/layout/PostCard";
 import {
   useGetPostByIdQuery,
   useGetPostsQuery,
+  useSetPostMutation,
 } from "../redux/features/api/baseApi";
 
 const Feed = () => {
   // const { data: posts, isLoading, isError } = useGetPostsQuery();
   const { register, handleSubmit } = useForm();
+
   const { data: post, isLoading, isError } = useGetPostByIdQuery(1);
 
+  const [setPost, { data: postData }] = useSetPostMutation();
+
+  console.log(postData);
+
   const onSubmit = (data) => {
-    console.log(data);
+    setPost({ title: "this is title", body: data.post, userId: 999 });
   };
 
   if (isLoading) {
