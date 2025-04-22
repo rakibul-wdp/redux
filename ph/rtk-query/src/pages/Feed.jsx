@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import PostCard from "../components/layout/PostCard";
 import {
   useGetPostByIdQuery,
-  useGetPostsQuery,
   useSetPostMutation,
 } from "../redux/features/api/baseApi";
 
